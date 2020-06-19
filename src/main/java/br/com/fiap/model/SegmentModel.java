@@ -1,7 +1,6 @@
 package br.com.fiap.model;
 
-
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
 public class SegmentModel {
 
@@ -25,11 +24,12 @@ public class SegmentModel {
 		this.idSegment = id;
 	}
 
-	
+	@NotBlank(message = "nome invalido")
 	public String getName() {
 		return name;
 	}
-
+	
+	
 	public void setName(String name) {
 		this.name = name;
 	}

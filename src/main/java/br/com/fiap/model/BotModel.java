@@ -1,7 +1,8 @@
 package br.com.fiap.model;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.PositiveOrZero;
+
 
 public class BotModel {
 	
@@ -40,7 +41,7 @@ public class BotModel {
 		this.defaultAnswer = defaultAnswer;
 	}
 
-	
+	@NotBlank(message = "Name nao pode ser nulo")
 	public String getNameBot() {
 		return nameBot;
 	}
@@ -48,7 +49,7 @@ public class BotModel {
 	public void setNameBot(String nameBot) {
 		this.nameBot = nameBot;
 	}
-
+    
 	public String getWelcomeMsg() {
 		return welcomeMsg;
 	}
@@ -65,10 +66,12 @@ public class BotModel {
 		this.farewellMsg = farewellMsg;
 	}
 
+	@PositiveOrZero(message = "valor invalido") 
 	public double getDowntime() {
 		return downtime;
 	}
-
+	
+	
 	public void setDowntime(double downtime) {
 		this.downtime = downtime;
 	}

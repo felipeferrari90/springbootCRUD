@@ -27,25 +27,26 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="well">
+                <div >
 					
-					<h2>Segmento</h2>
-					
-						<div class="form-group">
-							<label class="control-label" for="nome">Nome:</label>
-							<b>${segmento.name}</b>
-                        </div>
+					    <h2 class="text-center">Segmento - Detalhes</h2>
+					    <div class="bg-dark text-light">
+					    	<div class="form-group text-center">
+								<label class="control-label" for="nome">Nome:</label>
+								<b>${segmento.name}</b>
+                            </div>
 
-						<div class="form-group">
-							<label class="control-label" for="categoria">Bot:</label>
-							<label class="label label-default">${segmento.bot.nameBot}</label>
-						</div>
+						    <div class="form-group text-center">
+								<label class="control-label" for="categoria">Bot:</label>
+								<label class="label label-default">${segmento.bot.nameBot}</label>
+						    </div>
+					    </div>
 						
 						
-						<a class="btn btn-default btn-lg" href="${contextPath}/segment">Voltar</a>
+						
+						<a class="btn btn-default btn-outline-danger btn-lg" href="${contextPath}/segment">Voltar</a>
                             
-                        <br>
-                        <br>
+                        
 					
                 </div>
             </div>

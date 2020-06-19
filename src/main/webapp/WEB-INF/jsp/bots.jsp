@@ -29,17 +29,25 @@
         <div class="row">
             <div class="col-md-12">
 				
-				<h1>Bots</h1>
+				<h1 class="text-center">Bots</h1>
+				
+				<h4 class="py-3">clique no nome do bot para ver mais detalhes</h4>
 				
 				<p class="toolbar">
 				
-					<a class="create btn btn-default" href="${contextPath}/bot/form?page=bot-novo">Novo Bot</a>
+					<a class="create btn btn-info" href="${contextPath}/bot/form?page=bot-novo">Criar Novo Bot</a>
+					<span class="alert"></span>
+					<a class="create btn btn-info mr-0" href="${contextPath}/segment">Ver Segmentos</a>
+					
+					
 					<span class="alert"></span>
 				</p>
 				
 				<c:if test="${not empty messages}">
 					<h3 class="alert alert-warning">${messages}</h3>
 				</c:if>
+				
+			
 				
 				<table class="table table-striped">
 					<thead>
@@ -51,14 +59,14 @@
 					
 					<c:forEach items="${bots}" var="bot">
 						<tr>
-							<td>${bot.nameBot}</td>
+							<td><a class="btn btn-outline-secondary btn-link" href="${contextPath}/bot/${bot.idBot}">${bot.nameBot}</a></td>
 							
 							<td class="actions">
 							
 								<form:form action="${contextPath}/bot/${bot.idBot}" method="delete">
 								
-									<a class="btn btn-success btn-xs" href="${contextPath}/bot/${bot.idBot}">Detalhes</a>
-									<a class="btn btn-warning btn-xs" href="${contextPath}/bot/form?page=bot-editar&id=${bot.idBot}">Editar</a>
+									
+									<a class="btn btn-outline-warning btn-xs" href="${contextPath}/bot/form?page=bot-editar&id=${bot.idBot}">Editar</a>
 									<input type="submit" value="Excluir" class="btn btn-danger btn-xs">
 									
 								</form:form>

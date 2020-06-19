@@ -31,23 +31,27 @@
 				
 				<h1>Segmento</h1>
 				
+				<h4 class="py-3">clique no nome do segmento para ver mais detalhes</h4>
+				
 				<p class="toolbar">
 				
-					<a class="create btn btn-default" href="${contextPath}/segment/form?page=segmento-novo">Novo Segmento</a>
-	
+					<a class="create btn btn-info" href="${contextPath}/segment/form?page=segmento-novo">Novo Segmento</a>
+	                <a class="create btn btn-info mr-0" href="${contextPath}/bot">Ver Bots</a>
 					<span class="alert"></span>
 				</p>
 				
 				<c:if test="${not empty messages}">
-					<h3 class="alert alert-warning">${messages}</h3>
+					<h3 class="text-success">${messages}</h3>
 				</c:if>
+				
+				
 				
 				<table class="table table-striped">
 					<thead>
 						<tr>
 							<th data-field="name">Nome do segmento</th>
-							<th data-field="name">Id do pai</th>
-							<th data-field="name">Nome do pai</th>
+							<th data-field="name">Id do Bot</th>
+							<th data-field="name">Nome do Bot a qual pertence</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -55,7 +59,7 @@
 					
 					<c:forEach items="${segmentos}" var="segmento">
 						<tr>
-							<td>${segmento.name}</td>
+							<td><a class="btn btn-outline-secondary btn-link" href="${contextPath}/segment/${segmento.idSegment}">${segmento.name}</a></td>
 							
 							<td>${segmento.bot.idBot}</td>
 							
@@ -65,8 +69,8 @@
 							
 								<form:form action="${contextPath}/segment/${segmento.idSegment}" method="delete">
 								
-									<a class="btn btn-success btn-xs" href="${contextPath}/segment/${segmento.idSegment}">Detalhes</a>
-									<a class="btn btn-warning btn-xs" href="${contextPath}/segment/form?page=segmento-editar&id=${segmento.idSegment}">Editar</a>
+									
+									<a class="btn btn-outline-warning btn-xs" href="${contextPath}/segment/form?page=segmento-editar&id=${segmento.idSegment}">Editar</a>
 									<input type="submit" value="Excluir" class="btn btn-danger btn-xs">
 									
 								</form:form>

@@ -31,7 +31,7 @@
             <div class="col-lg-12">
                 <div class="well">
 					
-					<h2>Segmento</h2>
+					<h2 class="text-center">Segmento - Editar</h2>
 					
 					<form:form modelAttribute="segmentModel" action="${contextPath}/segment/${segmentModel.idSegment}" method="put">
 					

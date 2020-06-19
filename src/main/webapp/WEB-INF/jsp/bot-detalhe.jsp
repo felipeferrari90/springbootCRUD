@@ -26,11 +26,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="well">
+                <div class="">
 					
-					<h2>Bot</h2>
+					<h2 class="text-center">Detalhes do Bot</h2>
 					
-						<div class="form-group">
+					<div class="bg-dark text-light">
+					
+					    <div class="form-group">
 							<label class="control-label" for="nomeBot">Nome:</label>
 							<b>${bot.nameBot}</b>
                         </div>
@@ -54,11 +56,15 @@
 							<label class="control-label" for="nome">Mensagem Padrão:</label>
 							<b>${bot.defaultAnswer}</b>
                         </div>
+					
+					
+					</div>
+						
                         
                         
 						<hr>
 						
-						<a class="btn btn-default btn-lg" href="${contextPath}/bot">Voltar</a>
+						<a class="btn btn-default btn-lg outline-button-danger" href="${contextPath}/bot">Voltar</a>
                             
                         <br>
                         <br>

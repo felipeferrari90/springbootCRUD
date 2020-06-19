@@ -32,7 +32,7 @@
             <div class="col-lg-12">
                 <div class="well">
 					
-					<h2>Bot</h2>
+					<h1 class="text-center">Editar Bot</h1>
 					
 					<form:form modelAttribute="botModel" action="${contextPath}/bot/${botModel.idBot}" method="put">
 					
@@ -57,7 +57,7 @@
                         </div>
                         
                         <div class="form-group">
-							<label class="control-label" for="farewellMsg">farewellMSG:</label>
+							<label class="control-label" for="farewellMsg">farewellMsg:</label>
 							<form:input type="text" path="farewellMsg" id="farewellMsg" class="form-control" maxlength="50" size="50" />
 							<font color="red"><form:errors path="farewellMsg"/></font><br/>
 							

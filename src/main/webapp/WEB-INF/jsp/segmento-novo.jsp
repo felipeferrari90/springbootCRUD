@@ -28,7 +28,7 @@
             <div class="col-lg-12">
                 <div class="well">
 					
-					<h2>SEGMENTO</h2>
+					<h2 class="text-center">SEGMENTO</h2>
 					
 					<form:form modelAttribute="segmentModel" action="${contextPath}/segment" method="post">
 					
@@ -52,8 +52,11 @@
 							</form:select>
 						</div>
 						
-						<a class="btn btn-default btn-lg" href="${contextPath}/segment">Cancelar</a>
-						<button type="submit" class="btn btn-primary btn-lg">Gravar</button>
+						<div class="d-flex justify-content-center">
+							<a class="btn btn-default btn-lg" href="${contextPath}/segment">Cancelar</a>
+							<button type="submit" class="btn btn-primary btn-lg">Cadastrar Segmento</button>
+						</div>
+						
                             
                        
                         <br>

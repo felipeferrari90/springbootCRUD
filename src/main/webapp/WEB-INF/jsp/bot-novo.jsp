@@ -8,7 +8,7 @@
 
 <head>
 
-    <title>Categorias - Cadastro</title>
+    <title>Cadastro de um Bot Novo</title>
     
     <spring:url value="/css" var="css"/>
     <spring:url value="/js" var="js"/>
@@ -28,7 +28,7 @@
             <div class="col-lg-12">
                 <div class="well">
 					
-					<h2>Bot</h2>
+					<h2 class="text-center">Novo Bot</h2>
 					
 					<form:form modelAttribute="botModel" action="${contextPath}/bot" method="post">
 					
@@ -69,12 +69,14 @@
                         </div>
                         
 						<hr>
-						
-						<a class="btn btn-default btn-lg" href="${contextPath}/bot">Cancelar</a>
-						<button type="submit" class="btn btn-primary btn-lg">Gravar</button>
-                            
+						<div class="d-flex justify-content-center">
+							<a class="btn btn-default btn-lg" href="${contextPath}/bot">Cancelar</a>
+							<button type="submit" class="btn btn-primary btn-lg">Cadastrar Novo Bot</button>
+                        </div>    
+                        
                         <br>
                         <br>
+                        
 					</form:form>
 					
                 </div>
